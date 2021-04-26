@@ -108,6 +108,16 @@ fn main() {
     }
 
     println!("outer planet is {}", outer_planet);
+
+    let mut rocket_fuel = String::from("RP-1");
+    process_fuel(&mut rocket_fuel);
+    println!("{}", rocket_fuel);
+}
+
+fn process_fuel(propallant: &mut String) {
+    println!("{}", propallant);
+    propallant.push_str(" is changed");
+
 }
 
 
