@@ -83,9 +83,31 @@ fn main() {
     }
 
 
-    for (item,_charter) in hello.iter().enumerate() {
+    for (item, _charter) in hello.iter().enumerate() {
         println!("{} {}", item, _charter);
     }
+
+
+    let planet = "Earth";
+    println!("planet is  {}", planet);
+
+    let planet = "Mars"; // shadow variable
+    println!("planet is  {}", planet);
+
+    let message = String::from("Earth");
+    println!("{}", message);
+
+    let outer_planet: String;
+
+    {
+        let mut inner_planet = String::from("Mercury");
+        outer_planet = inner_planet.clone();
+        inner_planet.clear();
+
+        println!("inner planet is {}", inner_planet);
+    }
+
+    println!("outer planet is {}", outer_planet);
 }
 
 
