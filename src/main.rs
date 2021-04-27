@@ -1,4 +1,6 @@
-fn main() {
+use std::io;
+
+fn tutorials() {
     let mut x: i32 = 10; // By default the variables are immutable
     println!("{}", x);
 
@@ -82,15 +84,19 @@ fn main() {
         println!("{}", item);
     }
 
-
-    for (item,_charter) in hello.iter().enumerate() {
+    for (item, _charter) in hello.iter().enumerate() {
         println!("{} {}", item, _charter);
     }
 }
 
+fn main() {
+    let mut buffer = String::new();
+    println!("Enter a message: ");
+    io::stdin().read_line(&mut buffer);
+    println!("buffer is  {}", buffer);
+}
 
-fn say_hello()
-{
+fn say_hello() {
     println!("Hello");
 }
 
