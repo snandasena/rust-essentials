@@ -88,7 +88,6 @@ fn tutorials() {
         println!("{} {}", item, _charter);
     }
 
-
     let planet = "Earth";
     println!("planet is  {}", planet);
 
@@ -118,14 +117,6 @@ fn tutorials() {
 fn process_fuel(propallant: &mut String) {
     println!("{}", propallant);
     propallant.push_str(" is changed");
-
-}
-
-fn main() {
-    let mut buffer = String::new();
-    println!("Enter a message: ");
-    io::stdin().read_line(&mut buffer);
-    println!("buffer is  {}", buffer);
 }
 
 fn say_hello() {
@@ -134,4 +125,14 @@ fn say_hello() {
 
 fn squre(x: i32) -> i32 {
     return x * x;
+}
+
+fn main() {
+    let mut buffer = String::new();
+    println!("Enter a message: ");
+    io::stdin().read_line(&mut buffer);
+    println!("buffer is  {}", buffer);
+
+    let number: i32 = buffer.trim().parse().unwrap();
+    println!("number + 1 is {}", number + 1);
 }
