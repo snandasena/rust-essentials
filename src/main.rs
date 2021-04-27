@@ -87,6 +87,38 @@ fn tutorials() {
     for (item, _charter) in hello.iter().enumerate() {
         println!("{} {}", item, _charter);
     }
+
+
+    let planet = "Earth";
+    println!("planet is  {}", planet);
+
+    let planet = "Mars"; // shadow variable
+    println!("planet is  {}", planet);
+
+    let message = String::from("Earth");
+    println!("{}", message);
+
+    let outer_planet: String;
+
+    {
+        let mut inner_planet = String::from("Mercury");
+        outer_planet = inner_planet.clone();
+        inner_planet.clear();
+
+        println!("inner planet is {}", inner_planet);
+    }
+
+    println!("outer planet is {}", outer_planet);
+
+    let mut rocket_fuel = String::from("RP-1");
+    process_fuel(&mut rocket_fuel);
+    println!("{}", rocket_fuel);
+}
+
+fn process_fuel(propallant: &mut String) {
+    println!("{}", propallant);
+    propallant.push_str(" is changed");
+
 }
 
 fn main() {
